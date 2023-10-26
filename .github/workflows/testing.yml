@@ -10,3 +10,23 @@ jobs:
         run: npm install
       - name: Test app
         run: npm run test
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the repitory code
+        uses: actions/checkout@v4
+      - name: Install dependencies
+        run: npm install
+      - name: lint application
+        run: npm run lint
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the repitory code
+        uses: actions/checkout@v4
+      - name: Install dependencies
+        run: npm install
+      - name: build app
+        run: npm run build
+      -name: deploy
+       run: echo Deploying...
