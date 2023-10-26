@@ -1,0 +1,12 @@
+name: Test React App
+on: push
+jobs:
+  test_my_app:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the repitory code
+        uses: actions/checkout@v4
+      -name: Install dependencies
+        run: npm install
+      -name: Test app
+       run: npm run test
